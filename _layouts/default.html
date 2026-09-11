@@ -1,14 +1,32 @@
 <!doctype html>
-<html lang="ru">
+<html lang="{{ site.lang | default: 'ru-RU' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#23324a">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   {% seo %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": {{ site.data.site.brand | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "telephone": {{ site.data.site.contacts.phone_href | jsonify }},
+    "areaServed": [
+      {"@type":"City","name":"Балашов"},
+      {"@type":"AdministrativeArea","name":"Саратовская область"},
+      {"@type":"Country","name":"Россия"}
+    ],
+    "sameAs": [{{ site.data.site.contacts.vk | jsonify }}],
+    "founder": {
+      "@type": "Person",
+      "name": {{ site.data.broker.name | jsonify }},
+      "jobTitle": "Ипотечный брокер"
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
