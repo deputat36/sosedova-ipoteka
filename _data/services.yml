@@ -1,24 +1,42 @@
 services:
   - slug: podbor-ipoteki
     title: "Подбор ипотеки"
+    url: "/uslugi/podbor-ipoteki/"
+    description: "Разбор ситуации, подбор возможных программ и подготовка к заявке."
     active: true
 
   - slug: semeynaya-ipoteka
     title: "Семейная ипотека"
+    url: "/uslugi/semeynaya-ipoteka/"
+    description: "Проверка действующих условий программы, объекта и параметров клиента."
     active: true
 
   - slug: selskaya-ipoteka
     title: "Сельская ипотека"
+    url: "/uslugi/selskaya-ipoteka/"
+    description: "Проверка доступности программы, территории, объекта и требований банка."
     active: true
 
-  - slug: stroitelstvo-doma
+  - slug: ipoteka-na-stroitelstvo-doma
     title: "Ипотека на строительство дома"
+    url: "/uslugi/ipoteka-na-stroitelstvo-doma/"
+    description: "Подготовка ипотечного сценария для участка, подрядчика и строительства."
     active: true
 
-  - slug: otkaz-v-ipoteke
+  - slug: otkazali-v-ipoteke
     title: "Ипотека после отказа банка"
+    url: "/uslugi/otkazali-v-ipoteke/"
+    description: "Разбор причин и последовательности действий до новой заявки."
+    active: true
+
+  - slug: ipoteka-na-kvartiru
+    title: "Ипотека на квартиру"
+    url: "/uslugi/ipoteka-na-kvartiru/"
+    description: "Новостройка или вторичный рынок: бюджет, объект и банковский сценарий."
     active: true
 
   - slug: strahovanie
     title: "Страхование"
+    url: "/strahovanie/"
+    description: "Ипотечное страхование и другие программы физических лиц."
     active: true
