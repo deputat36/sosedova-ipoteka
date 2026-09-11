@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="/">Главная</a> / <a href="/uslugi/">Услуги</a> / {{ page.short_title | default: page.title }}</div>
+    {% if page.badge %}<p class="section-kicker">{{ page.badge }}</p>{% endif %}
+    <h1>{{ page.h1 | default: page.title }}</h1>
+    {% if page.lead %}<p>{{ page.lead }}</p>{% endif %}
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/kontakty/#zayavka">Обсудить ситуацию</a>
+      <a class="btn btn-secondary" href="tel:{{ site.data.site.contacts.phone_href }}">Позвонить</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container content-grid">
+    <article class="prose">
+      {{ content }}
+    </article>
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Первичная консультация</h3>
+        <p>Опишите цель, город, примерную стоимость объекта и то, были ли уже обращения в банки. Не отправляйте паспортные данные и коды подтверждения.</p>
+        <a class="btn btn-primary" href="/kontakty/#zayavka">Оставить заявку</a>
+        <p class="form-help">Решение об одобрении, ставке и сумме принимает банк.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container split">
+    <div>
+      <p class="section-kicker">Следующий шаг</p>
+      <h2 class="section-title">Сначала разберём ситуацию, потом выберем маршрут</h2>
+      <p class="section-lead">Это особенно важно, если есть отказ, нестандартный доход, строительство дома или сомнения в подходящей программе.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-light" href="/kontakty/#zayavka">Получить консультацию</a>
+      <a class="btn btn-outline-light" href="{{ site.data.site.contacts.vk }}" target="_blank" rel="noopener">Написать ВКонтакте</a>
+    </div>
+  </div>
+</section>
