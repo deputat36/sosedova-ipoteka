@@ -1,0 +1,24 @@
+services:
+  - slug: podbor-ipoteki
+    title: "Подбор ипотеки"
+    active: true
+
+  - slug: semeynaya-ipoteka
+    title: "Семейная ипотека"
+    active: true
+
+  - slug: selskaya-ipoteka
+    title: "Сельская ипотека"
+    active: true
+
+  - slug: stroitelstvo-doma
+    title: "Ипотека на строительство дома"
+    active: true
+
+  - slug: otkaz-v-ipoteke
+    title: "Ипотека после отказа банка"
+    active: true
+
+  - slug: strahovanie
+    title: "Страхование"
+    active: true
