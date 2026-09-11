@@ -1,0 +1,23 @@
+brand: "Соседова Ипотека"
+short_brand: "Соседова"
+tagline: "Ипотека с понятным планом действий"
+
+contacts:
+  phone_display: "+7 917 215-55-25"
+  phone_href: "+79172155525"
+  vk: "https://vk.ru/id374357370"
+  max: ""
+  email: ""
+
+coverage:
+  primary_city: "Балашов"
+  region: "Саратовская область"
+  remote: "Россия"
+
+cta:
+  primary: "Получить консультацию"
+  secondary: "Позвонить"
+
+legal:
+  disclaimer: "Информация на сайте носит справочный характер. Решение об одобрении ипотеки, ставке, сумме и иных условиях принимает банк. Условия программ могут меняться."
+  privacy_path: "/politika-konfidencialnosti/"
