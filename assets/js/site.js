@@ -32,10 +32,10 @@
     }).format(value || 0);
 
     const calculate = () => {
-      const p = Math.max(0, Number(price.value) || 0);
-      const d = Math.min(p, Math.max(0, Number(downPayment.value) || 0));
-      const y = Math.max(1, Number(years.value) || 1);
-      const annualRate = Math.max(0, Number(rate.value) || 0);
+      const p = Math.max(0, Number(price?.value) || 0);
+      const d = Math.min(p, Math.max(0, Number(downPayment?.value) || 0));
+      const y = Math.max(1, Number(years?.value) || 1);
+      const annualRate = Math.max(0, Number(rate?.value) || 0);
       const principal = Math.max(0, p - d);
       const months = y * 12;
       const monthlyRate = annualRate / 100 / 12;
@@ -50,8 +50,8 @@
       if (amountOutput) amountOutput.textContent = formatMoney(principal);
     };
 
-    [price, downPayment, years, rate].forEach((field) => {
-      if (field) field.addEventListener('input', calculate);
+    [price, downPayment, years, rate].filter(Boolean).forEach((field) => {
+      field.addEventListener('input', calculate);
     });
     calculate();
   }
@@ -69,4 +69,32 @@
       }
     });
   });
+
+  const draftForm = document.querySelector('[data-draft-form]');
+  if (draftForm) {
+    const status = draftForm.querySelector('[data-draft-status]');
+    draftForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!draftForm.reportValidity()) return;
+
+      const data = new FormData(draftForm);
+      const lines = [
+        'Здравствуйте! Хочу проконсультироваться по ипотеке.',
+        '',
+        `Имя: ${String(data.get('name') || '').trim() || 'не указано'}`,
+        `Город: ${String(data.get('city') || '').trim() || 'не указан'}`,
+        `Телефон: ${String(data.get('phone') || '').trim() || 'не указан'}`,
+        `Задача: ${String(data.get('task') || '').trim() || 'не указана'}`,
+        `Ситуация: ${String(data.get('comment') || '').trim() || 'без комментария'}`
+      ];
+      const text = lines.join('\n');
+
+      try {
+        await navigator.clipboard.writeText(text);
+        if (status) status.textContent = 'Текст заявки скопирован. Теперь откройте ВКонтакте или отправьте его любым удобным способом.';
+      } catch (_) {
+        if (status) status.textContent = 'Не удалось скопировать автоматически. Выделите данные вручную или позвоните по телефону.';
+      }
+    });
+  }
 })();
