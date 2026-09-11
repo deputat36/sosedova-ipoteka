@@ -1,0 +1,19 @@
+title: "Соседова Ипотека"
+email: ""
+description: "Ипотечный брокер Людмила Соседова. Помощь в подборе ипотеки, семейной ипотеке, строительстве дома и сопровождении сделки."
+baseurl: ""
+url: ""
+lang: "ru-RU"
+
+# Проект построен как отдельная версия на основе шаблона broker.
+# Все данные брокера хранятся в _data, чтобы в дальнейшем можно было масштабировать шаблон.
+
+broker_data: "broker"
+seo_data: "seo"
+services_data: "services"
+
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
