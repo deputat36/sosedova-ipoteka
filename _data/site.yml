@@ -1,6 +1,11 @@
+# Общие настройки сайта
+# Слой конфигурации для будущего шаблона ипотечных брокеров
+
 brand: "Соседова Ипотека"
 short_brand: "Соседова"
 tagline: "Ипотека с понятным планом действий"
+language: "ru"
+country: "Россия"
 
 contacts:
   phone_display: "+7 917 215-55-25"
@@ -17,6 +22,18 @@ coverage:
 cta:
   primary: "Получить консультацию"
   secondary: "Позвонить"
+
+lead_capture:
+  channels:
+    - phone
+    - vk
+    - max
+    - online_form
+
+seo:
+  sitemap: true
+  schema_org: true
+  analytics_ready: true
 
 legal:
   disclaimer: "Информация на сайте носит справочный характер. Решение об одобрении ипотеки, ставке, сумме и иных условиях принимает банк. Условия программ могут меняться."
